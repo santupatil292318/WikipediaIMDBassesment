@@ -3,6 +3,7 @@ package com.crm.imdbHome;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindAll;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -18,7 +19,8 @@ public class ImdbHomePage {
 	@FindBy(xpath = "//button[@type='submit']")
 	private WebElement submitbtn;
 	
-	@FindBy(xpath = "//h3[@class='findSectionHeader' and text()='Titles']/following-sibling::table/descendant::tr[@class='findResult odd']/td[@class='primary_photo']")
+	@FindAll({@FindBy(xpath = "//h3[@class='findSectionHeader' and text()='Titles']/following-sibling::table/descendant::tr[@class='findResult odd']/td[@class='primary_photo']")
+	,@FindBy(xpath = "//a[@class='ipc-metadata-list-summary-item__t' and contains(@href,'fn_al_tt_1')]")})
 	private WebElement selectpushpalink;
 	
 	
