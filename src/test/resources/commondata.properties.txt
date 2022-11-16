@@ -1,0 +1,3 @@
+urlimdb https://www.imdb.com/
+urlwiki https://www.wikipedia.org/
+browser chrome
